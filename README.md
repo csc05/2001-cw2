@@ -1,3 +1,4 @@
+# USE COMP2001 CW1 Report to set up database. Except change SCHEMA to CW2
 # 2001-cw2
 COMP2001 Coursework 2
 
