@@ -25,7 +25,10 @@
     <Compile Include="CW2MicroService.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="swagger.yaml" />
+    <Content Include="static\swagger.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="static\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

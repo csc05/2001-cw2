@@ -1,0 +1,29 @@
+swagger: '2.0'
+info:
+  description: API to manage users and trails.
+  version: "1.0.0"
+  title: TrailService API
+paths:
+  /users:
+    post:
+      summary: Add a new user
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: user
+          description: User object to add
+          schema:
+            type: object
+            required:
+              - UserName
+            properties:
+              UserName:
+                type: string
+      responses:
+        201:
+          description: User added successfully
+        400:
+          description: Bad request
+        500:
+          description: Internal server error
