@@ -27,3 +27,22 @@ paths:
           description: Bad request
         500:
           description: Internal server error
+    get:
+      summary: Retrieve all users
+      description: Returns a list of all users in the database.
+      responses:
+        200:
+          description: A list of users in the database
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                ID:
+                  type: integer
+                  description: The user ID
+                Name:
+                  type: string
+                  description: The user name
+        500:
+          description: Internal server error

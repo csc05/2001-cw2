@@ -29,7 +29,7 @@ def swagger_yaml():
 
 # Verify Credentials Function
 def verify_credentials(email, password):
-    response = requests.post(auth_url, json={"email": email, "password": password})  # Change to `json` format
+    response = requests.post(auth_url, json={"email": email, "password": password})  # Changed to json format
  
     if response.status_code == 200:
         try:
@@ -52,7 +52,6 @@ def verify_credentials(email, password):
         print(f"Authentication failed with status code {response.status_code}")
         print("Response content:", response.text)
         return False
-
 
 # Check authentication before running the app
 def check_authentication():
@@ -96,7 +95,7 @@ if check_authentication():
             print(f"Error: {e}")
             return None
 
-    # Sample Route: Get All Trails
+    # Route: Get All Trails
     @app.route("/trails", methods=["GET"])
     def get_trails():
         conn = get_db_connection()
@@ -118,7 +117,7 @@ if check_authentication():
             cursor.close()
             conn.close()
 
-    # Sample Route: Add a New Trail
+    # Route: Add a New Trail
     @app.route("/trails", methods=["POST"])
     def add_trail():
         data = request.get_json()
@@ -178,8 +177,7 @@ if check_authentication():
             cursor.close()
             conn.close()
 
-
-    # Sample Route: Get All Users
+    # Route: Get All Users
     @app.route("/users", methods=["GET"])
     def get_users():
         conn = get_db_connection()
